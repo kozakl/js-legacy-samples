@@ -43,7 +43,7 @@ FMovieClip.prototype.gotoAndStop = function(frame)
  */
 FMovieClip.prototype.updateTransform = function()
 {
-    this.time += this.motionSpeed * Main.delta;
+    this.time += this.motionSpeed * MainTween.delta;
     
     if (this.playing)
     {
