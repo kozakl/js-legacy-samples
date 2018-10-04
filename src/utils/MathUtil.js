@@ -70,8 +70,8 @@ export default class MathUtil
     }
     
     static rotatePoint(cx, cy,
-					   px, py,
-					   a,  result) {
+                       px, py,
+                       a, result) {
         const asin = Math.sin(a),
               acos = Math.cos(a);
         
