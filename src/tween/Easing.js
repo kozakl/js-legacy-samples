@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 Easing.PI_M2 = Math.PI * 2;
 Easing.PI_D2 = Math.PI / 2;
 

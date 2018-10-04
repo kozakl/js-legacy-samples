@@ -1,6 +1,3 @@
-/**
- * @constructor
- */
 class TweenCubicCurve extends TweenCore
 {
     constructor(target)

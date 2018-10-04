@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 class TweenPos extends TweenCore
 {
     constructor(target)

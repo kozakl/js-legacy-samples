@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 class TweenRotate extends TweenCore
 {
     constructor(target)

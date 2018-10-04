@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 class TweenCore
 {
     constructor()

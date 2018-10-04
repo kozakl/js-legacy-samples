@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 class TweenScale extends TweenCore
 {
     constructor(target)
