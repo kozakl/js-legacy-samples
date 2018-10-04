@@ -1,7 +1,7 @@
 /**
  * @author kozakluke@gmail.com
  */
-export default  class ArrayUtil
+class ArrayUtil
 {
     static shuffle(array)
     {
