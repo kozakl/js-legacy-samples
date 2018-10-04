@@ -1,5 +1,5 @@
-import partial from '../../src/utils/partial';
-import pipe    from '../../src/utils/pipe';
+import partial from './partial';
+import pipe    from './pipe';
 
 const add = (a, b)=> a + b,
       mul = (a, b)=> a * b,

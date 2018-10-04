@@ -1,4 +1,4 @@
-import partial from '../../src/utils/partial';
+import partial from './partial';
 
 const add = (a, b)=> a + b,
       inc = (num)=> num + 1;
