@@ -10,6 +10,6 @@ class DNumber
     set(begin, end)
     {
         this.begin = begin;
-        this.end   = end;
+        this.end = end;
     }
 }

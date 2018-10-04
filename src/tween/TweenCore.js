@@ -15,18 +15,18 @@ class TweenCore
     
     update(delta)
     {
-        this.time   += delta * this.motionSpeed;
+        this.time += delta * this.motionSpeed;
         this.percent = this.time / this.duration;
         if (this.percent > 1) {
-            this.time    = this.duration;
+            this.time = this.duration;
             this.percent = 1;
         }
     }
     
     destroy()
     {
-        this.target      = null;
-        this.complete    = null;
+        this.target = null;
+        this.complete = null;
         this.completeArg = null;
     }
 }

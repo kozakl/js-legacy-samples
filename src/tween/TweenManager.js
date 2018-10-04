@@ -74,7 +74,7 @@ class TweenManager
 }
 
 TweenManager.delaysPool = [];
-TweenManager.tweens     = [];
+TweenManager.tweens = [];
 
 class Delay extends TweenCore
 {
@@ -87,11 +87,11 @@ class Delay extends TweenCore
     
     to(duration, complete,
                  completeArg) {
-        this.duration    = duration;
-        this.complete    = complete;
+        this.duration = duration;
+        this.complete = complete;
         this.completeArg = completeArg;
-        this.time        = 0;
-        this.percent     = 0;
+        this.time = 0;
+        this.percent = 0;
     }
     
     update(delta)
@@ -101,7 +101,7 @@ class Delay extends TweenCore
             this.time += delta * this.motionSpeed;
             if (this.time < this.delay)
                 return;
-            this.time  = 0;
+            this.time = 0;
             this.delay = null;
         }
         this.tweenCoreUpdate(delta);
