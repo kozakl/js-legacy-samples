@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 export default class StringUtil
 {
     static isFilled(string)

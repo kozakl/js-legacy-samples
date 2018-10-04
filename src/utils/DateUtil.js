@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 class DateUtil
 {
     static dateDiff(date1, date2)

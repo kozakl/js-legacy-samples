@@ -1,5 +1,4 @@
 /**
- * @author kozakluke@gmail.com
  * @constructor
  */
 function Sprite3DShader(shaderManager)

@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 export default class MathUtil
 {
     static RADIANS = Math.PI / 180;

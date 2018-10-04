@@ -1,5 +1,4 @@
 /**
- * @author kozakluke@gmail.com
  * @extends {Sprite}
  * @constructor
  */

@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 class BezierUtil
 {
     static pointOnQuadCurve(x1, y1,

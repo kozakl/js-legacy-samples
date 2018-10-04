@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 class TextureUtil
 {
     static copyFrames(frames, n, path)
