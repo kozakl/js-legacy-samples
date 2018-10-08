@@ -1,4 +1,4 @@
-export default class MathUtil
+class MathUtil
 {
     static RADIANS = Math.PI / 180;
     static DEGREES = 180 / Math.PI;
