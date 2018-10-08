@@ -1,8 +1,5 @@
 class MathUtil
 {
-    static RADIANS = Math.PI / 180;
-    static DEGREES = 180 / Math.PI;
-    
     static rndRange(min, max)
     {
         return min + (Math.random() * (max - min));
@@ -80,3 +77,6 @@ class MathUtil
         return result;
     }
 }
+
+MathUtil.RADIANS = Math.PI / 180;
+MathUtil.DEGREES = 180 / Math.PI;
