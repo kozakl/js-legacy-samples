@@ -8,14 +8,14 @@ class DetectDevice
         if (DetectDevice.device)
             return DetectDevice.device;
         
-        var n = DetectDevice.tablets.length;
-        for (var i = 0; i < n; i++)
+        let n = DetectDevice.tablets.length;
+        for (let i = 0; i < n; i++)
             
             if (navigator.userAgent.match(DetectDevice.tablets[i]))
                 return DetectDevice.device = 'tablet';
         
         n = DetectDevice.smartphones.length;
-        for (i = 0; i < n; i++)
+        for (let i = 0; i < n; i++)
             if (navigator.userAgent.match(DetectDevice.smartphones[i]))
                 return DetectDevice.device = 'smartphone';
         

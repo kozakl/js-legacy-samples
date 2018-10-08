@@ -3,7 +3,7 @@ class TextureUtil
     static copyFrames(frames, n, path)
     {
         frames = frames || [];
-        for (var i = 1; i <= n; ++i)
+        for (let i = 1; i <= n; ++i)
             frames[frames.length] = PIXI.Texture.fromFrame(path + '/frame' + i + '.png');
         
         return frames;

@@ -3,12 +3,12 @@ class SoundUtil
     static pauseSound()
     {
         const n = Howler._howls.length;
-        for (var i = 0; i < n; ++i)
+        for (let i = 0; i < n; ++i)
         {
             const howl   = Howler._howls[i],
                   sounds = howl._sounds,
                   m      = sounds.length;
-            for (var j = 0; j < m; ++j)
+            for (let j = 0; j < m; ++j)
             {
                 const sound = sounds[j];
                 if (!sound._paused) {
@@ -22,12 +22,12 @@ class SoundUtil
     static resumeSound()
     {
         const n = Howler._howls.length;
-        for (var i = 0; i < n; ++i)
+        for (let i = 0; i < n; ++i)
         {
             const howl   = Howler._howls[i],
                   sounds = howl._sounds,
                   m      = sounds.length;
-            for (var j = 0; j < m; ++j)
+            for (let j = 0; j < m; ++j)
             {
                 const sound = sounds[j];
                 if (sound.needResume) {
