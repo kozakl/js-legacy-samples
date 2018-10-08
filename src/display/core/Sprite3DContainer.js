@@ -64,9 +64,12 @@ Sprite3DContainer.prototype.updateTransform = function()
     this.positionVec[1]  = this.position.y;
     this.positionVec[2]  = this.position.z;
     
-    MathUtil.fromRotationTranslationScale(this.worldTransform3d, this.rotationQuat,
-                                                                 this.positionVec,
-                                                                 this.scaleVec);
+    MatrixUtil.fromRotationTranslationScale(
+        this.worldTransform3d,
+        this.rotationQuat,
+        this.positionVec,
+        this.scaleVec
+    );
     mat4.multiply(this.worldTransform3d, this.parent.worldTransform3d, this.worldTransform3d);
     
     this.worldAlpha = this.alpha * this.parent.worldAlpha;
