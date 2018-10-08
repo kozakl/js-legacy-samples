@@ -10,7 +10,7 @@ class ScaleUtil
         }
         else if (mode === ScaleUtil.SHOW_ALL)
         {
-            var scale = destW / targetW > destH / targetH ?
+            let scale = destW / targetW > destH / targetH ?
                         destH / targetH :
                         destW / targetW;
             if (scale < minZoom)
@@ -22,9 +22,9 @@ class ScaleUtil
         }
         else if (mode === ScaleUtil.NO_BORDER)
         {
-            scale = destW / targetW < destH / targetH ?
-                    destH / targetH :
-                    destW / targetW;
+            let scale = destW / targetW < destH / targetH ?
+                        destH / targetH :
+                        destW / targetW;
             if (scale < minZoom)
                 scale = minZoom;
             else if (scale > maxZoom)
