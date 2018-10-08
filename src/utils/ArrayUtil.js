@@ -12,17 +12,4 @@ class ArrayUtil
         
         return array;
     }
-    
-    static compare(key, asc)
-    {
-        return (a, b)=> {
-            a = a[key];
-            b = b[key];
-            if (a > b)
-                return 1 * asc;
-            if (a < b)
-                return-1 * asc;
-            return 0;
-        };
-    }
 }
