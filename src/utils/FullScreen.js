@@ -2,17 +2,17 @@ class FullScreen
 {
     static isSupported()
     {
-        return !!(document.documentElement.requestFullscreen       ||
+        return !!(document.documentElement.requestFullscreen ||
                   document.documentElement.webkitRequestFullscreen ||
-                  document.documentElement.mozRequestFullScreen    ||
+                  document.documentElement.mozRequestFullScreen ||
                   document.documentElement.msRequestFullscreen);
     }
     
     static isFullScreen()
     {
-        return !!(document.fullscreenElement       ||
+        return !!(document.fullscreenElement ||
                   document.webkitFullscreenElement ||
-                  document.mozFullScreenElement    ||
+                  document.mozFullScreenElement ||
                   document.msFullscreenElement);
     }
     
@@ -39,7 +39,7 @@ class FullScreen
     }
 }
 
-FullScreen.CHANGE = document.documentElement.requestFullscreen       && 'fullscreenchange'       ||
+FullScreen.CHANGE = document.documentElement.requestFullscreen && 'fullscreenchange' ||
                     document.documentElement.webkitRequestFullscreen && 'webkitfullscreenchange' ||
-                    document.documentElement.mozRequestFullScreen    && 'mozfullscreenchange'    ||
-                    document.documentElement.msRequestFullscreen     && 'MSFullscreenChange';
+                    document.documentElement.mozRequestFullScreen && 'mozfullscreenchange' ||
+                    document.documentElement.msRequestFullscreen && 'MSFullscreenChange';
