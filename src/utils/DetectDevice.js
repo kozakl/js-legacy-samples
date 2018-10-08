@@ -19,24 +19,24 @@ class DetectDevice
             if (navigator.userAgent.match(DetectDevice.smartphones[i]))
                 return DetectDevice.device = 'smartphone';
         
-        DetectDevice.ie = navigator.userAgent.indexOf('MSIE') !=-1 ||
+        DetectDevice.ie = navigator.userAgent.indexOf('MSIE') !== -1 ||
                           navigator.appVersion.indexOf('Trident/') > 0;
         return DetectDevice.device = 'desktop';
     }
     
     static isDesktop()
     {
-        return Number(DetectDevice.detect() == 'desktop');  
+        return Number(DetectDevice.detect() === 'desktop');  
     }
     
     static isMobile()
     {
-        return Number(DetectDevice.detect() != 'desktop');
+        return Number(DetectDevice.detect() !== 'desktop');
     }
     
     static isIE()
     {
-        if (DetectDevice.ie == null)
+        if (!DetectDevice.ie)
             DetectDevice.detect();
         return DetectDevice.ie;
     }
@@ -65,4 +65,4 @@ DetectDevice.tablets = [
     /iPad/i
 ];
 DetectDevice.device = null;
-DetectDevice.ie     = null;
+DetectDevice.ie = null;
