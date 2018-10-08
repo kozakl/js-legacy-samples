@@ -2,14 +2,14 @@ class TweenManager
 {
     static add(tween)
     {
-        if (TweenManager.tweens.indexOf(tween) == -1)
+        if (TweenManager.tweens.indexOf(tween) === -1)
             TweenManager.tweens.push(tween);
     }
     
     static remove(tween)
     {
         const i = TweenManager.tweens.indexOf(tween);
-        if (i != -1)
+        if (i !== -1)
             TweenManager.tweens[i] = null;
     }
     
@@ -38,7 +38,7 @@ class TweenManager
     static stopDelay(delay)
     {
         TweenManager.remove(delay);
-        if (TweenManager.delaysPool.indexOf(delay) == -1)
+        if (TweenManager.delaysPool.indexOf(delay) === -1)
             TweenManager.delaysPool.push(delay);
     }
     
@@ -46,14 +46,14 @@ class TweenManager
     {
         var n = TweenManager.tweens.length,
             c = 0;
-        if (n == 0)
+        if (n === 0)
             return;
         for (var i = 0; i < n; ++i)
         {
             const tween = TweenManager.tweens[i];
             if (tween)
             {
-                if (c != i) {
+                if (c !== i) {
                     TweenManager.tweens[c] = tween;
                     TweenManager.tweens[i] = null;
                 }
@@ -62,7 +62,7 @@ class TweenManager
             }
         }
         
-        if (c != i)
+        if (c !== i)
         {
             n = TweenManager.tweens.length;
             while (i < n)
