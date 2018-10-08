@@ -4,11 +4,11 @@ class ScaleUtil
                  targetW, targetH,
                  destW,   destH,
                  minZoom, maxZoom) {
-        if (mode == ScaleUtil.EXACT_FIT) {
+        if (mode === ScaleUtil.EXACT_FIT) {
             target.scale.x = destW / targetW;
             target.scale.y = destH / targetH;
         }
-        else if (mode == ScaleUtil.SHOW_ALL)
+        else if (mode === ScaleUtil.SHOW_ALL)
         {
             var scale = destW / targetW > destH / targetH ?
                         destH / targetH :
@@ -20,7 +20,7 @@ class ScaleUtil
             
             target.scale.x = target.scale.y = scale;
         }
-        else if (mode == ScaleUtil.NO_BORDER)
+        else if (mode === ScaleUtil.NO_BORDER)
         {
             scale = destW / targetW < destH / targetH ?
                     destH / targetH :
@@ -36,5 +36,5 @@ class ScaleUtil
 }
 
 ScaleUtil.EXACT_FIT = 1;
-ScaleUtil.SHOW_ALL  = 2;
+ScaleUtil.SHOW_ALL = 2;
 ScaleUtil.NO_BORDER = 3;
