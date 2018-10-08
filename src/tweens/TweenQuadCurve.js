@@ -5,7 +5,7 @@ class TweenQuadCurve extends TweenCore
         super();
         //args
         this.target   = target;
-        //protected private
+        //private
         this.scaleX   = new DNumber();
         this.scaleY   = new DNumber();
         this.pos      = new PIXI.Point();

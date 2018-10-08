@@ -5,7 +5,7 @@ class TweenAlpha extends TweenCore
         super();
         //args
         this.target = target;
-        //protected private
+        //private
         this.alpha  = new DNumber();
         this.delay  = null;
     }

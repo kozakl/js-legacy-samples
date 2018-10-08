@@ -5,7 +5,7 @@ class TweenRotate extends TweenCore
         super();
         //args
         this.target = target;
-        //protected private
+        //pprivate
         this.rotate = new DNumber();
     }
     

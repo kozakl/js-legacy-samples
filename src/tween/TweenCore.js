@@ -4,7 +4,7 @@ class TweenCore
     {
         //public
         this.motionSpeed = 1;
-        //protected private
+        //private
         this.time        = 0;
         this.percent     = 0;
         this.duration    = null;

@@ -5,7 +5,7 @@ class TweenScale extends TweenCore
         super();
         //args
         this.target = target;
-        //protected private
+        //private
         this.scaleX = new DNumber();
         this.scaleY = new DNumber();
         this.delay  = null;

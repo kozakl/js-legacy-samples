@@ -5,7 +5,7 @@ class TweenPos extends TweenCore
         super();
         //args
         this.target = target;
-        //protected private
+        //private
         this.x      = new DNumber();
         this.y      = new DNumber();
         this.delay  = null;
