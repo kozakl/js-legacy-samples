@@ -12,4 +12,14 @@ class ArrayUtil
         
         return array;
     }
+    
+    static removeNull(array)
+    {
+        for (let i = array.length; i--;) {
+            if (!array[i])  
+                array.splice(i, 1);
+        }
+        
+        return array;
+    }
 }
