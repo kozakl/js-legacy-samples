@@ -14,13 +14,13 @@ class TweenScale extends TweenCore
     to(duration, delay, ease, complete,
                               completeArg,
                               scaleX, scaleY) {
-        this.duration    = duration;
-        this.delay       = delay;
-        this.ease        = ease;
-        this.complete    = complete;
+        this.duration = duration;
+        this.delay = delay;
+        this.ease = ease;
+        this.complete = complete;
         this.completeArg = completeArg;
-        this.time        = 0;
-        this.percent     = 0;
+        this.time = 0;
+        this.percent = 0;
         
         this.scaleX.set(this.target.scale.x, scaleX);
         this.scaleY.set(this.target.scale.y, scaleY);

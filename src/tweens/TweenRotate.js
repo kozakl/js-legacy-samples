@@ -5,19 +5,19 @@ class TweenRotate extends TweenCore
         super();
         //args
         this.target = target;
-        //pprivate
+        //private
         this.rotate = new DNumber();
     }
     
     to(duration, ease, complete,
                        completeArg,
                        rotate) {
-        this.duration    = duration;
-        this.ease        = ease;
-        this.complete    = complete;
+        this.duration = duration;
+        this.ease = ease;
+        this.complete = complete;
         this.completeArg = completeArg;
-        this.time        = 0;
-        this.percent     = 0;
+        this.time = 0;
+        this.percent = 0;
         
         this.rotate.set(this.target.rotation, rotate);
     }

@@ -6,19 +6,19 @@ class TweenAlpha extends TweenCore
         //args
         this.target = target;
         //private
-        this.alpha  = new DNumber();
-        this.delay  = null;
+        this.alpha = new DNumber();
+        this.delay = null;
     }
     
     to(duration, delay, complete,
                         completeArg,
                         alpha) {
-        this.duration    = duration;
-        this.delay       = delay;
-        this.complete    = complete;
+        this.duration = duration;
+        this.delay = delay;
+        this.complete = complete;
         this.completeArg = completeArg;
-        this.time        = 0;
-        this.percent     = 0;
+        this.time = 0;
+        this.percent = 0;
         
         this.alpha.set(this.target.alpha, alpha);
     }

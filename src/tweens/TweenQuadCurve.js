@@ -4,7 +4,7 @@ class TweenQuadCurve extends TweenCore
     {
         super();
         //args
-        this.target   = target;
+        this.target = target;
         //private
         this.scaleX   = new DNumber();
         this.scaleY   = new DNumber();
@@ -19,15 +19,15 @@ class TweenQuadCurve extends TweenCore
                               completeArg,
                               scaleX, scaleY,
                               curve) {
-        this.duration    = duration;
-        this.delay       = delay;
-        this.ease        = ease;
-        this.progress    = progress;
-        this.complete    = complete;
+        this.duration = duration;
+        this.delay = delay;
+        this.ease = ease;
+        this.progress = progress;
+        this.complete = complete;
         this.completeArg = completeArg;
-        this.curve       = curve;
-        this.time        = 0;
-        this.percent     = 0;
+        this.curve = curve;
+        this.time = 0;
+        this.percent = 0;
         
         this.scaleX.set(this.target.scale.x, scaleX);
         this.scaleY.set(this.target.scale.y, scaleY);

@@ -6,21 +6,21 @@ class TweenPos extends TweenCore
         //args
         this.target = target;
         //private
-        this.x      = new DNumber();
-        this.y      = new DNumber();
-        this.delay  = null;
+        this.x     = new DNumber();
+        this.y     = new DNumber();
+        this.delay = null;
     }
     
     to(duration, delay, ease, complete,
                               completeArg,
                               x, y) {
-        this.duration    = duration;
-        this.delay       = delay;
-        this.ease        = ease;
-        this.complete    = complete;
+        this.duration = duration;
+        this.delay = delay;
+        this.ease = ease;
+        this.complete = complete;
         this.completeArg = completeArg;
-        this.time        = 0;
-        this.percent     = 0;
+        this.time = 0;
+        this.percent = 0;
         
         this.x.set(this.target.position.x, x);
         this.y.set(this.target.position.y, y);
