@@ -62,4 +62,4 @@ FMovieClip3D.prototype.updateTransform = function()
     this.sprite3dUpdateTransform();
 };
 
-FMovieClip.prototype.movieClip3DUpdateTransform = FMovieClip.prototype.updateTransform;
+FMovieClip3D.prototype.movieClip3DUpdateTransform = FMovieClip3D.prototype.updateTransform;
