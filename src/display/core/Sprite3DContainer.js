@@ -74,8 +74,8 @@ Sprite3DContainer.prototype.updateTransform = function()
     
     this.worldAlpha = this.alpha * this.parent.worldAlpha;
     
-    var n = this.children.length;
-    for (var i = 0; i < n; ++i)
+    const n = this.children.length;
+    for (let i = 0; i < n; ++i)
         this.children[i].updateTransform();
 };
 

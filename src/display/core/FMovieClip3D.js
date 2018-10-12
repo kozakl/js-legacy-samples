@@ -52,7 +52,7 @@ FMovieClip3D.prototype.updateTransform = function()
         if (this.loop || time < n)
             this._texture = this.textures[time % n];
         else if (time >= n) {
-            var complete = this.complete;
+            let complete = this.complete;
             this.complete = null;
             if (complete)
                 complete();

@@ -226,9 +226,9 @@ MovieClip3D.prototype.destroy = function ( )
  */
 MovieClip3D.fromFrames = function (frames)
 {
-    var textures = [];
+    const textures = [];
 
-    for (var i = 0; i < frames.length; ++i)
+    for (let i = 0; i < frames.length; ++i)
     {
         textures.push(new core.Texture.fromFrame(frames[i]));
     }
@@ -244,9 +244,9 @@ MovieClip3D.fromFrames = function (frames)
  */
 MovieClip3D.fromImages = function (images)
 {
-    var textures = [];
+    const textures = [];
 
-    for (var i = 0; i < images.length; ++i)
+    for (let i = 0; i < images.length; ++i)
     {
         textures.push(new core.Texture.fromImage(images[i]));
     }
