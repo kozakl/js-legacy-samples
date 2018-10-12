@@ -7,7 +7,7 @@ class Cursor
     
     static set(type)
     {
-        if (this.current != type) {
+        if (this.current !== type) {
             this.current = type;
             this.element.style.cursor = type;
         }

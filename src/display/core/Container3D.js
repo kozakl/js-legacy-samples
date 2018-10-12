@@ -29,17 +29,17 @@ Container3D.prototype.updateTransform = function()
     if (!this.visible)
         return;
     
-    if (this.rotation.x != this.rotationCache.x) {
+    if (this.rotation.x !== this.rotationCache.x) {
         this.rotationCache.x = this.rotation.x;
         this._cx = Math.cos(this.rotation.x * 0.5);
         this._sx = Math.sin(this.rotation.x * 0.5);
     }
-    if (this.rotation.y != this.rotationCache.y) {
+    if (this.rotation.y !== this.rotationCache.y) {
         this.rotationCache.y = this.rotation.y;
         this._cy = Math.cos(this.rotation.y * 0.5);
         this._sy = Math.sin(this.rotation.y * 0.5);
     }
-    if (this.rotation.z != this.rotationCache.z) {
+    if (this.rotation.z !== this.rotationCache.z) {
         this.rotationCache.z = this.rotation.z;
         this._cz = Math.cos(this.rotation.z * 0.5);
         this._sz = Math.sin(this.rotation.z * 0.5);
