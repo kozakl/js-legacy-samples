@@ -34,7 +34,7 @@ class TweenCubicCurve3D extends TweenCore
             this.time += delta * this.motionSpeed;
             if (this.time < this.delay)
                 return;
-            this.time  = 0;
+            this.time = 0;
             this.delay = null;
         }
         this.tweenCoreUpdate(delta);
