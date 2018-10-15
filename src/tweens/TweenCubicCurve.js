@@ -46,12 +46,12 @@ class TweenCubicCurve extends TweenCore
         this.tweenCoreUpdate(delta);
         
         const curve = this.curve,
-              ease  = this.ease(this.time, 0, 1, this.duration);
-        this.pos  = BezierUtil.pointOnCubicCurve(curve[0].x, curve[0].y,
-                                                 curve[1].x, curve[1].y,
-                                                 curve[2].x, curve[2].y,
-                                                 curve[3].x, curve[3].y,
-                                                 ease, this.pos);
+              ease = this.ease(this.time, 0, 1, this.duration);
+        this.pos = BezierUtil.pointOnCubicCurve(curve[0].x, curve[0].y,
+                                                curve[1].x, curve[1].y,
+                                                curve[2].x, curve[2].y,
+                                                curve[3].x, curve[3].y,
+                                                ease, this.pos);
         this.target.scale.x = this.scaleX.begin - (this.scaleX.begin - this.scaleX.end) * ease;
         this.target.scale.y = this.scaleY.begin - (this.scaleY.begin - this.scaleY.end) * ease;
         this.target.position.x = this.pos.x;

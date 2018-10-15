@@ -46,7 +46,7 @@ class TweenQuadCurve extends TweenCore
         this.tweenCoreUpdate(delta);
         
         const curve = this.curve,
-              ease  = this.ease(this.time, 0, 1, this.duration);
+              ease = this.ease(this.time, 0, 1, this.duration);
         this.pos = BezierUtil.pointOnQuadCurve(curve[0].x, curve[0].y,
                                                curve[1].x, curve[1].y,
                                                curve[2].x, curve[2].y,
