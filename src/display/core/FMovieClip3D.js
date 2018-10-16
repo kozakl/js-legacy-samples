@@ -19,6 +19,14 @@ function FMovieClip3D(textures)
 FMovieClip3D.prototype = Object.create(Sprite3D.prototype);
 FMovieClip3D.prototype.constructor = FMovieClip3D;
 
+Object.defineProperties(FMovieClip3D.prototype, {
+    currentFrame: {
+        get: function() {
+            return (this.time | 0) % this.textures.length;
+        }
+    }
+});
+
 FMovieClip3D.prototype.play = function()
 {
     this.playing = true;
