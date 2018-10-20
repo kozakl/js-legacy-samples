@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 class Cursor
 {
     static init(element)
@@ -10,7 +7,7 @@ class Cursor
     
     static set(type)
     {
-        if (this.current != type) {
+        if (this.current !== type) {
             this.current = type;
             this.element.style.cursor = type;
         }
