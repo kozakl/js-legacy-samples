@@ -88,9 +88,9 @@ class MainTween
      */
     onVisibility()
     {
-        if (document['visibilityState'] == 'hidden')
+        if (document['visibilityState'] === 'hidden')
             cancelAnimationFrame(MainTween.animationId);
-        else if (document['visibilityState'] == 'visible')
+        else if (document['visibilityState'] === 'visible')
             this.updateHandler(MainTween.last = performance.now());
     }
     
