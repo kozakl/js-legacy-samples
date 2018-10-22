@@ -61,7 +61,7 @@ class TweenCubicCurve extends TweenCore
             this.progress(this.percent);
         if (this.percent >= 1)
         {
-            var complete = this.complete;
+            let complete = this.complete;
             this.complete = null;
             if (complete)
             {

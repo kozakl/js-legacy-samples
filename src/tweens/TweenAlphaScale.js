@@ -34,7 +34,7 @@ class TweenAlphaScale extends TweenCore
             this.time += delta * this.motionSpeed;
             if (this.time < this.delay)
                 return;
-            this.time  = 0;
+            this.time = 0;
             this.delay = null;
         }
         this.tweenCoreUpdate(delta);
@@ -46,7 +46,7 @@ class TweenAlphaScale extends TweenCore
         
         if (this.percent >= 1)
         {
-            var complete = this.complete;
+            let complete = this.complete;
             this.complete = null;
             if (complete)
             {
