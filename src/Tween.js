@@ -10,21 +10,21 @@ class Tween
             window.devicePixelRatio = window['devicePixelRatio'] || 1;
         } catch(event) { }
         
-        const screenWidth  = Math.max(screen.width, screen.height);
-        const screenHeight = Math.min(screen.width, screen.height);
-        const innerWidth   = Math.max(window.innerWidth, window.innerHeight);
-        const innerHeight  = Math.min(window.innerWidth, window.innerHeight);
-        const width  = screenWidth  / window.devicePixelRatio >= innerWidth ?
-                       screenWidth  / window.devicePixelRatio : screenWidth;
+        const screenWidth = Math.max(screen.width, screen.height),
+              screenHeight = Math.min(screen.width, screen.height),
+              innerWidth = Math.max(window.innerWidth, window.innerHeight),
+              innerHeight = Math.min(window.innerWidth, window.innerHeight);
+        const width = screenWidth / window.devicePixelRatio >= innerWidth ?
+                      screenWidth / window.devicePixelRatio : screenWidth;
         const height = screenHeight / window.devicePixelRatio >= innerHeight ?
                        screenHeight / window.devicePixelRatio : screenHeight;
-        Tween.scaleView   = DetectDevice.isDesktop() || Math.min(width  * window.devicePixelRatio / 960,
-                                                                height * window.devicePixelRatio / 640);
-        Tween.viewWidth   = window.innerWidth  * window.devicePixelRatio / Tween.scaleView;
-        Tween.viewHeight  = window.innerHeight * window.devicePixelRatio / Tween.scaleView;
+        Tween.scaleView = DetectDevice.isDesktop() || Math.min(width  * window.devicePixelRatio / 960,
+                                                               height * window.devicePixelRatio / 640);
+        Tween.viewWidth = window.innerWidth  * window.devicePixelRatio / Tween.scaleView;
+        Tween.viewHeight = window.innerHeight * window.devicePixelRatio / Tween.scaleView;
         Tween.animationId = null;
-        Tween.last        = 0;
-        Tween.delta       = 0;
+        Tween.last = 0;
+        Tween.delta = 0;
         
         window.onload = this.onLoad.bind(this);
     }
@@ -70,8 +70,8 @@ class Tween
         (this.updateHandler = function update(now)
         {
             Tween.animationId = requestAnimationFrame(update);
-            delta      = now - Tween.last;
-            Tween.last  = now;
+            delta = now - Tween.last;
+            Tween.last = now;
             Tween.delta = delta * 0.06;
             
             stats.update();
@@ -96,10 +96,10 @@ class Tween
      */
     onResize()
     {
-        Tween.viewWidth  = window.innerWidth  * window.devicePixelRatio / Tween.scaleView;
+        Tween.viewWidth = window.innerWidth  * window.devicePixelRatio / Tween.scaleView;
         Tween.viewHeight = window.innerHeight * window.devicePixelRatio / Tween.scaleView;
         
-        this.renderer.view.style.width  = window.innerWidth  + 'px';
+        this.renderer.view.style.width  = window.innerWidth + 'px';
         this.renderer.view.style.height = window.innerHeight + 'px';
         this.renderer.resize(window.innerWidth  * window.devicePixelRatio,
                              window.innerHeight * window.devicePixelRatio);
