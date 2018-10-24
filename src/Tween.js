@@ -2,7 +2,7 @@ class Tween
 {
     constructor()
     {
-        //protected private
+        //private
         this.stage    = null;
         this.renderer = null;
         
