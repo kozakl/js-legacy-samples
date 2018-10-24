@@ -1,4 +1,4 @@
-class MainTween
+class Tween
 {
     constructor()
     {
@@ -18,13 +18,13 @@ class MainTween
                        screenWidth  / window.devicePixelRatio : screenWidth;
         const height = screenHeight / window.devicePixelRatio >= innerHeight ?
                        screenHeight / window.devicePixelRatio : screenHeight;
-        MainTween.scaleView   = DetectDevice.isDesktop() || Math.min(width  * window.devicePixelRatio / 960,
+        Tween.scaleView   = DetectDevice.isDesktop() || Math.min(width  * window.devicePixelRatio / 960,
                                                                 height * window.devicePixelRatio / 640);
-        MainTween.viewWidth   = window.innerWidth  * window.devicePixelRatio / MainTween.scaleView;
-        MainTween.viewHeight  = window.innerHeight * window.devicePixelRatio / MainTween.scaleView;
-        MainTween.animationId = null;
-        MainTween.last        = 0;
-        MainTween.delta       = 0;
+        Tween.viewWidth   = window.innerWidth  * window.devicePixelRatio / Tween.scaleView;
+        Tween.viewHeight  = window.innerHeight * window.devicePixelRatio / Tween.scaleView;
+        Tween.animationId = null;
+        Tween.last        = 0;
+        Tween.delta       = 0;
         
         window.onload = this.onLoad.bind(this);
     }
@@ -39,8 +39,8 @@ class MainTween
         stats.domElement.style.position = 'absolute';
         
         const stage = this.stage = new PIXI.Container();
-        stage.scale.x = MainTween.scaleView;
-        stage.scale.y = MainTween.scaleView;
+        stage.scale.x = Tween.scaleView;
+        stage.scale.y = Tween.scaleView;
         const renderer = this.renderer = PIXI.autoDetectRenderer(0, 0);
         document.body.appendChild(renderer.view);
         renderer.backgroundColor = 0x333333;
@@ -57,7 +57,7 @@ class MainTween
         
         const tweenPos = new TweenPos(shape);
         tweenPos.to(5, 1, Easing.backInOut,
-            TweenManager.remove, tweenPos, MainTween.viewWidth - 100, 100);
+            TweenManager.remove, tweenPos, Tween.viewWidth - 100, 100);
         TweenManager.add(tweenPos);
         
         TweenManager.delayCall(2, console.log, 'delay call');
@@ -69,10 +69,10 @@ class MainTween
         var delta = 0;
         (this.updateHandler = function update(now)
         {
-            MainTween.animationId = requestAnimationFrame(update);
-            delta      = now - MainTween.last;
-            MainTween.last  = now;
-            MainTween.delta = delta * 0.06;
+            Tween.animationId = requestAnimationFrame(update);
+            delta      = now - Tween.last;
+            Tween.last  = now;
+            Tween.delta = delta * 0.06;
             
             stats.update();
             tweenManager.update(delta * 0.001);
@@ -86,9 +86,9 @@ class MainTween
     onVisibility()
     {
         if (document['visibilityState'] === 'hidden')
-            cancelAnimationFrame(MainTween.animationId);
+            cancelAnimationFrame(Tween.animationId);
         else if (document['visibilityState'] === 'visible')
-            this.updateHandler(MainTween.last = performance.now());
+            this.updateHandler(Tween.last = performance.now());
     }
     
     /**
@@ -96,8 +96,8 @@ class MainTween
      */
     onResize()
     {
-        MainTween.viewWidth  = window.innerWidth  * window.devicePixelRatio / MainTween.scaleView;
-        MainTween.viewHeight = window.innerHeight * window.devicePixelRatio / MainTween.scaleView;
+        Tween.viewWidth  = window.innerWidth  * window.devicePixelRatio / Tween.scaleView;
+        Tween.viewHeight = window.innerHeight * window.devicePixelRatio / Tween.scaleView;
         
         this.renderer.view.style.width  = window.innerWidth  + 'px';
         this.renderer.view.style.height = window.innerHeight + 'px';
@@ -108,4 +108,4 @@ class MainTween
     }
 }
 
-new MainTween();
+new Tween();
