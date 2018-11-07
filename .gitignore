@@ -1,17 +1,11 @@
 # Dependencies
 node_modules/
 
-# Testing
-coverage/
-
-# Mats
-mats/*
-
 # Public
 public/*
 !public/favicon.ico
 !public/manifest.json
-!public/index.html
+!public/*.html
 
 # Others
 .idea/
