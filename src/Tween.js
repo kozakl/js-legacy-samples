@@ -96,12 +96,12 @@ class Tween
      */
     onResize()
     {
-        Tween.viewWidth = window.innerWidth  * window.devicePixelRatio / Tween.scaleView;
+        Tween.viewWidth = window.innerWidth * window.devicePixelRatio / Tween.scaleView;
         Tween.viewHeight = window.innerHeight * window.devicePixelRatio / Tween.scaleView;
         
-        this.renderer.view.style.width  = window.innerWidth + 'px';
+        this.renderer.view.style.width = window.innerWidth + 'px';
         this.renderer.view.style.height = window.innerHeight + 'px';
-        this.renderer.resize(window.innerWidth  * window.devicePixelRatio,
+        this.renderer.resize(window.innerWidth * window.devicePixelRatio,
                              window.innerHeight * window.devicePixelRatio);
         this.renderer.render(this.stage);
         window.scrollTo(0, 0);
