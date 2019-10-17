@@ -7,7 +7,7 @@ class TweenFlakeX extends TweenCore
         this.target = target;
         //private
         this.rotation = new DNumber();
-        this.x = new DNumber();
+        this.x        = new DNumber();
     }
     
     to(duration, ease, complete,
